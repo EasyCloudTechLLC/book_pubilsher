@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Result of Get books from publisher</title>
+  </head>
+
+  <body>
+    <a href="/">Back to Home Page</a>
+    <h1>Result of Get books from publisher</h1>
+    
+      <form action="/result_get_books_from_publisher" method="POST">
+      <table border="1">
+
+      <tr>
+      <th>publisherID</th>
+      <th>publisherName</th>
+      <th>bookID</th>
+      <th>isbn</th>
+      <th>title</th>
+      <th>price</th>
+      <th>edition</th>
+      <th>copyright</th>
+      <th>pages</th>
+      </tr>
+
+      {% for book_authors in data %}
+      <tr>
+      <td>{{ book_authors[0] }}</td>
+      <td>{{ book_authors[1] }}</td>
+      <td>{{ book_authors[2] }}</td>
+      <td>{{ book_authors[3] }}</td>
+      <td>{{ book_authors[4] }}</td>
+      <td>{{ book_authors[5] }}</td>
+      <td>{{ book_authors[6] }}</td>
+      <td>{{ book_authors[7] }}</td>
+      <td>{{ book_authors[8] }}</td>
+
+      </tr>
+      {% endfor %}
+
+      </table>
+      </form>
+
+  </body>
+
+</html>

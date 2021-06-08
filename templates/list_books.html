@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>List Books</title>
+  </head>
+
+  <body>
+    <a href="/">Back to Home Page</a>
+    <h1>List Books</h1>
+    
+      <form action="/list_authors" method="POST">
+
+      <table border="1">
+
+      <tr>
+      <th>bookID</th>
+      <th>publisherID</th>
+      <th>isbn</th>
+      <th>title</th>
+      <th>price</th>
+      <th>edition</th>
+      <th>copyright</th>
+      <th>pages</th>
+      </tr>
+
+      {% for books in data %}
+      <tr>
+      <td>{{ books[0] }}</td>
+      <td>{{ books[1] }}</td>
+      <td>{{ books[2] }}</td>
+      <td>{{ books[3] }}</td>
+      <td>{{ books[4] }}</td>
+      <td>{{ books[5] }}</td>
+      <td>{{ books[6] }}</td>
+      <td>{{ books[7] }}</td>
+
+      </tr>
+      {% endfor %}
+
+      </table>
+
+    </form>
+  </body>
+
+</html>
